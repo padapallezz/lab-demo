@@ -4,7 +4,15 @@
 // Output: [4, 3, 2, 1]
 function reverseArray(arr) {
   // Write you solution here
-}
+    return[...arr].reverse(); //reverse
+  }
+  const arr1= [1,2,3,4];
+  const arr2=reverseArray(arr1);
+  console.log("Original Array:", arr1);
+  console.log("Reversed Array:", arr2);
+
+
+
 
 // Write a function that removes duplicate numbers from an array and returns a new array with only unique values.
 // Example:
@@ -12,7 +20,15 @@ function reverseArray(arr) {
 // Output: [1, 2, 3, 4, 5]
 function removeDuplicates(arr) {
   // Write you solution here
+  return[...new Set(arr)]; //remove duplicate
 }
+  const dArray =[1,2,6,3,4,3,5,6]
+  const nDArray = removeDuplicates(dArray);
+  console.log("Array: ", dArray);
+  console.log("Not duplicate array",nDArray);
+
+
+
 
 // Write a function that sorts an array of numbers in ascending order (smallest to largest).
 // Example:
@@ -20,7 +36,12 @@ function removeDuplicates(arr) {
 // Output: [1, 2, 5, 5, 6, 9]
 function sortArray(arr) {
   // Write you solution here
+  return[arr.sort((a,b) => a-b )];
 }
+const array =[2,1,3,4,5];
+const sArray= sortArray(array);
+console.log(sArray);
+
 
 // You have a synchronous function that returns a greeting message with your name.
 // Your task is to convert it into an asynchronous function that returns a Promise,
@@ -30,7 +51,9 @@ function syncGreet(name) {
 
 function asyncGreet(name) {
   // Write you solution here
+  return `Hello, ${name}!`;
 }
+
 
 module.exports = {
   reverseArray,
